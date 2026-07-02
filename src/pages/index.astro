@@ -1,11 +1,22 @@
 ---
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
 import Hero from "../layouts/Hero.astro";
 import About from "../layouts/About.astro";
 import Services from "../layouts/Services.astro";
 import Products from "../layouts/Products.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "#",
+  name: "H&C Productions",
+  url: "#",
+  logo: "#",
+  description: "#",  sameAs: [
+    "#",
+    "#"
+  ]
+};
 ---
 <Layout title="The Kabob Guy" description="The Kabob Guy is a restaurant that serves delicious kabobs and other Middle Eastern dishes.">
   <Hero />
