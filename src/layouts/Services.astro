@@ -1,0 +1,31 @@
+---
+import Card from '../components/Card.astro';
+import Icon1 from '../assets/people-fill.svg';
+import Icon2 from '../assets/person.svg';
+import Icon3 from '../assets/box-fill.svg';
+---
+<section>
+    <div class="container, py-16 mx-auto flex flex-col gap-8 w-11/12 max-w-6xl justify-between items-center">
+        <div class="flex flex-col gap-4 text-center">
+            <h2 class="font-semibold text-4xl italic text-blue-900">Our Services</h2>
+            <p class="text-zinc-500">Discover our range of high-quality services designed to meet your needs.</p>
+        </div>
+        <div class="flex flex-col gap-4 w-full sm:grid sm:grid-cols-2 md:grid-cols-3">
+            <Card
+            title="Family Owned"
+            description="H&C Products: Proudly Family Owned Since 2015"
+            icon={Icon1}
+            />
+            <Card
+            title="Service"
+            description="Crafting Quality, American-Made Solutions."
+            icon={Icon2}
+            />
+            <Card
+            title="Delivery"
+            description="Our Stock is Always Ready to Serve You."
+            icon={Icon3}
+            />
+        </div>
+    </div>
+</section>

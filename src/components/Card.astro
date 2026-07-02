@@ -1,0 +1,63 @@
+---
+import Button from '../components/Button.astro';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  description: string;
+  icon?: any;
+  options?: string[];  
+  backgroundImage?: ImageMetadata;
+  backgroundAlt?: string;
+  variant?: 'primary' | 'secondary';
+  button?: {
+    label: string;
+    href: string;
+  };
+}
+const {
+  title,
+  description,
+  button,
+  backgroundImage,
+  backgroundAlt,
+  options = [],
+  icon: Icon,
+  variant = 'primary',
+} = Astro.props;
+---
+
+<div class={`bg-white flex flex-row sm:flex-col items-center border border-zinc-300 overflow-hidden justify-between shadow-md w-full mx-auto max-w-6xl card-fade opacity-0 translate-y-8 transition-all duration-1000 ease-out : ''}`}>
+  {backgroundImage && (
+    <Image
+      src={backgroundImage}
+      alt={backgroundAlt || 'Card background image'}
+      class=" w-fit h-fit object-fit object-center"
+    />
+  )}
+
+  <div class="flex flex-col gap-4 p-4 ">
+    <div class="flex flex-row gap-4 items-center">
+      {Icon && (
+        <Icon class="w-16 h-16 text-blue-900" />
+      )}
+
+      <h2 class="text-blue-900 text-2xl font-semibold">{title}</h2>
+    </div>
+
+    <p class="text-zinc-500 font-medium">{description}</p>
+
+    <ul class="flex flex-col gap-4">
+        {options.map((option) => (
+            <li class="text-zinc-700 border-b border-zinc-300 font-normal text-sm">{option}</li>
+        ))}
+    </ul>
+
+    {button && (
+      <div class="flex flex-row">
+        <Button label={button.label} href={button.href} variant={variant} />
+      </div>
+    )}
+    </div>
+</div>

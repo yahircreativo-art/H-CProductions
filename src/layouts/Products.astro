@@ -1,0 +1,90 @@
+---
+import Card from '../components/Card.astro';
+import backgroundImage from '../assets/pdfImage.webp';
+import image1 from '../assets/image1.jpg';
+import image2 from '../assets/image2.jpg';
+import image3 from '../assets/image3.png';
+import image4 from '../assets/image4.jpg';
+---
+<section class="bg-zinc-100">
+    <div class="container, py-16 mx-auto flex flex-col gap-8 w-11/12 max-w-6xl justify-between items-center">
+        <div class="flex flex-col gap-4 items-center">
+            <h2 class="font-semibold text-4xl italic text-blue-900">Our Products</h2>
+            <p class="text-zinc-500">Discover our range of high-quality products designed to meet your needs.</p>
+        </div>
+        <div class="flex flex-col gap-4 w-full sm:grid sm:grid-cols-2 md:grid-cols-3">
+            <Card
+            title="Family Owned"
+            description="H&C Products: Proudly Family Owned Since 2015 - ANSI 600"
+            backgroundImage={image1}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+            <Card
+            title="Service"
+            description="Crafting Quality, American-Made Solutions."
+            backgroundImage={image2}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+            <Card
+            title="Delivery"
+            description="Our Stock is Always Ready to Serve You."
+            backgroundImage={image3}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+            <Card
+            title="Delivery"
+            description="Our Stock is Always Ready to Serve You."
+            backgroundImage={image4}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+            <Card
+            title="Delivery"
+            description="Our Stock is Always Ready to Serve You."
+            backgroundImage={image2}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+            <Card
+            title="Delivery"
+            description="Our Stock is Always Ready to Serve You."
+            backgroundImage={image2}
+            options={[
+                "Caudal Control Valves 12m/min",
+                "Powered Actuators 75 HP",
+                "Noise 68 dB(A)",
+            ]}
+            button={{ label: "Learn More", href: "/contact" }}
+            variant="secondary"
+            />
+        </div>
+    </div>
+</section>

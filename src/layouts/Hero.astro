@@ -1,0 +1,24 @@
+---
+import Button from '../components/Button.astro';
+import logo from '../assets/logo.svg';
+---
+
+<section class="relative bg-cover min-h-screen bg-center bg-no-repeat flex items-center justify-center"
+>
+
+  <div class="container flex flex-col gap-8 px-4 py-16 text-center text-zinc-50 z-10 sm:text-start max-w-6xl justify-between items-center mx-auto sm:grid sm:grid-cols-2">
+    <div class="col-start-2">
+        <img src={logo.src} alt="Slogan" class="w-full h-auto max-w-md mx-auto" />
+    </div>
+
+    <div class="row-start-1 flex flex-col gap-4 ">
+        <h1 class="text-blue-900 text-5xl lg:text-6xl font-bold italic">EVERYTHING YOU NEED WHEN YOU NEED IT?</h1>
+        <p class="text-zinc-600 text-lg font-light">
+          Honest, reliable service with fast and dependable solutions.
+        </p>
+        <div class="sm:flex">
+            <Button label="BOOK YOUR TABLE" href="/contacto" variant="primary" />
+        </div>
+    </div>
+  </div>
+</section>
