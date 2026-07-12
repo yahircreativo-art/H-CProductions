@@ -8,7 +8,7 @@ import logoWeb from '../assets/logo.svg';
         <input id="nav-toggle" type="checkbox" class="peer sr-only" />
 
         <div class="container max-w-6xl mx-auto flex items-center justify-between gap-12 px-4 py-4">
-            <a href="/" class="flex items-center">
+            <a href="/H-CProductions" class="flex items-center">
                 <img src={logoWeb.src} alt="H&C Productions logo" class="h-14 w-auto" />
             </a>
 
@@ -22,21 +22,47 @@ import logoWeb from '../assets/logo.svg';
             </div>
 
             <ul class="hidden items-center md:flex gap-6">
-                <li><a href="/menu" class=" hover:text-blue-700 text-blue-800">Home</a></li>
-                <li><a href="/about" class="hover:text-blue-700 text-blue-800">About</a></li>
-                <li><a href="/contact" class="hover:text-blue-700 text-blue-800">Manufacturers</a></li>
-                <li><a href="/contact" class="hover:text-blue-700 text-blue-800">Contact</a></li>
-                <Button label="Sign Up" href="/contact" />
+                <li><a href="/H-CProductions" class="hover:text-blue-700 text-blue-800">Home</a></li>
+                <li><a href="/H-CProductions/about" class="hover:text-blue-700 text-blue-800">About</a></li>
+                <li class="relative group">
+                    <button type="button" class="flex items-center gap-1 hover:text-blue-700 text-blue-800 cursor-pointer transition-colors duration-200">
+                        Manufacturers
+                        <span class="text-xs transition-transform duration-200 group-hover:rotate-180">▼</span>
+                    </button>
+                    <div class="absolute left-0 top-full z-10 pt-3 opacity-0 pointer-events-none translate-y-2 transition-all duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0">
+                        <div class="min-w-56 rounded-xl border border-zinc-200 bg-white p-2 shadow-lg">
+                            <a href="/H-CProductions/manufacturers/indelac" class="block rounded-lg px-3 py-2 text-sm text-blue-800 transition-colors duration-200 hover:bg-zinc-200 hover:text-blue-700">Indelac</a>
+                            <a href="/H-CProductions/manufacturers/belgas" class="block rounded-lg px-3 py-2 text-sm text-blue-800 transition-colors duration-200 hover:bg-zinc-200 hover:text-blue-700">Belgas</a>
+                            <a href="/H-CProductions/manufacturers/reotemp" class="block rounded-lg px-3 py-2 text-sm text-blue-800 transition-colors duration-200 hover:bg-zinc-200 hover:text-blue-700">Reotemp</a>
+                            <a href="/H-CProductions/manufacturers/superlok" class="block rounded-lg px-3 py-2 text-sm text-blue-800 transition-colors duration-200 hover:bg-zinc-200 hover:text-blue-700">Superlok</a>
+                            <a href="/H-CProductions/manufacturers/delta-controls" class="block rounded-lg px-3 py-2 text-sm text-blue-800 transition-colors duration-200 hover:bg-zinc-200 hover:text-blue-700">Delta Controls</a>
+                        </div>
+                    </div>
+                </li>
+                <Button label="Contact" href="/contact" />
             </ul>
         </div>
 
-        <div class="absolute inset-x-0 top-full z-40 block overflow-hidden max-h-0 opacity-0 scale-y-95 bg-white px-4 py-0 transition-[max-height,opacity,transform] duration-300 ease-out md:hidden peer-checked:max-h-[20rem] peer-checked:opacity-100 peer-checked:scale-y-100 peer-checked:py-4">
-            <ul class="flex flex-col gap-3">
-                <li><a href="/menu" class="block rounded-lg px-3 py-2 text-blue-800 hover:bg-zinc-200 hover:text-blue-700">Home</a></li>
-                    <li><a href="/about" class="block rounded-lg px-3 py-2 text-blue-800 hover:bg-zinc-200 hover:text-blue-700">About</a></li>
-                    <li><a href="/contact" class="block rounded-lg px-3 py-2 text-blue-800 hover:bg-zinc-200 hover:text-blue-700">Manufacturers</a></li>
-                <li><a href="/contact" class="block rounded-lg px-3 py-2 text-blue-800 hover:bg-zinc-200 hover:text-blue-700">Contact</a></li>
-                <li><Button label="Sign Up" href="/contact" /> </li>
+        <div class="absolute inset-x-0 top-full z-40 block overflow-hidden max-h-0 opacity-0 scale-y-95 bg-white px-4 py-0 transition-[max-height,opacity,transform] duration-300 ease-out md:hidden peer-checked:max-h-[30rem] peer-checked:opacity-100 peer-checked:scale-y-100 peer-checked:py-4">
+            <ul class="flex max-h-[30rem] flex-col gap-3 overflow-y-auto">
+                <li><a href="/H-CProductions" class="block rounded-lg px-3 py-2 text-blue-800  hover:text-blue-700">Home</a></li>
+                <li><a href="/H-CProductions/about" class="block rounded-lg px-3 py-2 text-blue-800  hover:text-blue-700">About</a></li>
+                <li class="rounded-lg px-3 py-2 text-blue-800 rounded-lg  ">
+                    <button type="button" class="flex w-full items-center justify-between hover:text-blue-700 cursor-pointer transition-colors duration-200" data-mobile-dropdown-toggle>
+                        <span>Manufacturers</span>
+                        <span class="text-xs transition-transform duration-200" data-mobile-dropdown-icon>▼</span>
+                    </button>
+                    <div class="mt-4 hidden opacity-0 translate-y-2 transition-all duration-200 ease-out" data-mobile-dropdown-menu>
+                        <div class="flex flex-col gap-4 pl-4">
+                            <a href="/H-CProductions/manufacturers/indelac" class="text-sm transition-colors duration-200 hover:text-blue-700">Indelac</a>
+                            <a href="/H-CProductions/manufacturers/belgas" class="text-sm transition-colors duration-200 hover:text-blue-700">Belgas</a>
+                            <a href="/H-CProductions/manufacturers/reotemp" class="text-sm transition-colors duration-200 hover:text-blue-700">Reotemp</a>
+                            <a href="/H-CProductions/manufacturers/superlok" class="text-sm transition-colors duration-200 hover:text-blue-700">Superlok</a>
+                            <a href="/H-CProductions/manufacturers/delta-controls" class="text-sm transition-colors duration-200 hover:text-blue-700">Delta Controls</a>
+                        </div>
+                    </div>
+                </li>
+                <li><Button label="Contact" href="/contact" /> </li>
             </ul>
         </div>
     </nav>
@@ -47,3 +73,28 @@ import logoWeb from '../assets/logo.svg';
         </div>
     </div>
 </header>
+
+<script>
+  const mobileDropdownToggle = document.querySelector('[data-mobile-dropdown-toggle]');
+  const mobileDropdownMenu = document.querySelector('[data-mobile-dropdown-menu]');
+  const mobileDropdownIcon = document.querySelector('[data-mobile-dropdown-icon]');
+
+  if (mobileDropdownToggle && mobileDropdownMenu) {
+    mobileDropdownToggle.addEventListener('click', () => {
+      const isHidden = mobileDropdownMenu.classList.contains('hidden');
+      mobileDropdownMenu.classList.toggle('hidden', !isHidden);
+      if (mobileDropdownIcon) {
+        mobileDropdownIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
+      if (isHidden) {
+        requestAnimationFrame(() => {
+          mobileDropdownMenu.classList.remove('opacity-0', 'translate-y-2');
+          mobileDropdownMenu.classList.add('opacity-100', 'translate-y-0');
+        });
+      } else {
+        mobileDropdownMenu.classList.remove('opacity-100', 'translate-y-0');
+        mobileDropdownMenu.classList.add('opacity-0', 'translate-y-2');
+      }
+    });
+  }
+</script>

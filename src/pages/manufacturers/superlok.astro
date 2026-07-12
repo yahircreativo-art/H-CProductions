@@ -1,0 +1,25 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import CardAbout from "../../components/CardAbout.astro"
+import Products from "../../layouts/Products.astro";
+import belgas from "../../assets/superlok.jpg"
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "#",
+  name: "H&C Productions",
+  url: "#",
+  logo: "#",
+  description: "#",  sameAs: [
+    "#",
+    "#"
+  ]
+};
+---
+<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/belgas">
+  <div class="container w-11/12 mx-auto pt-40">
+    <CardAbout title='About' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top'/>
+  </div>
+  <Products />
+</Layout>
