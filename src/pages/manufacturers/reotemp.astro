@@ -4,6 +4,57 @@ import Layout from "../../layouts/Layout.astro";
 import CardAbout from "../../components/CardAbout.astro"
 import Products from "../../layouts/Products.astro";
 import belgas from "../../assets/reotemp.webp"
+import image1 from "../../assets/thermometers.webp";
+import image2 from "../../assets/rtd.webp";
+import image3 from "../../assets/temperature-transmitters.webp";
+import image4 from "../../assets/thermowells.webp";
+import image5 from "../../assets/pressure-gauges.webp";
+import image6 from "../../assets/pressure-transmitters.webp";
+import image7 from "../../assets/diaphragm-seals.webp";
+import image8 from "../../assets/valves-and-manifolds.webp";
+
+const products = [
+  {
+    title: 'Thermometers',
+    description: 'Precision thermometers designed for accurate temperature measurement in demanding industrial environments.',
+    backgroundImage: image1,
+  },
+  {
+    title: 'RTD’s and Thermocouples',
+    description: 'Reliable temperature sensors that provide accurate readings for process monitoring and control.',
+    backgroundImage: image2,
+  },
+  {
+    title: 'Temperature Transmitters',
+    description: 'Temperature transmitters that convert sensor signals into reliable, easy-to-use process outputs.',
+    backgroundImage: image3,
+  },
+  {
+    title: 'Thermowells',
+    description: 'Durable thermowells that protect sensors while maintaining accurate temperature measurement.',
+    backgroundImage: image4,
+  },
+  {
+    title: 'Pressure Gauges',
+    description: 'Robust pressure gauges for clear, dependable indication of system pressure conditions.',
+    backgroundImage: image5,
+  },
+  {
+    title: 'Pressure Transmitters',
+    description: 'High-quality pressure transmitters that deliver stable signals for control and monitoring systems.',
+    backgroundImage: image6,
+  },
+  {
+    title: 'Diaphragm Seals',
+    description: 'Diaphragm seals that protect instruments from corrosive media and harsh process conditions.',
+    backgroundImage: image7,
+  },
+  {
+    title: 'Valves and Manifolds',
+    description: 'Versatile valves and manifolds that support reliable fluid handling and instrumentation setups.',
+    backgroundImage: image8,
+  },
+];
 
 const schema = {
   "@context": "https://schema.org",
@@ -17,9 +68,9 @@ const schema = {
   ]
 };
 ---
-<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/belgas">
+<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/reotemp">
   <div class="container w-11/12 max-w-6xl mx-auto pt-40">
-    <CardAbout title='About' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top'/>
+    <CardAbout title='Electric Actuators and Controls' subtitle='AMERICAN MANUFACTURER OF' description='Indelac Controls, Inc. manufactures a broad range of products for the valve and damper automation industry.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top' button={{href: '', label:"See catalog"}}/>
   </div>
-  <Products />
+  <Products products={products} />
 </Layout>

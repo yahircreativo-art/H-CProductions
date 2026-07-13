@@ -3,7 +3,24 @@ import "../../styles/global.css";
 import Layout from "../../layouts/Layout.astro";
 import CardAbout from "../../components/CardAbout.astro"
 import Products from "../../layouts/Products.astro";
-import belgas from "../../assets/delta.png"
+import belgas from "../../assets/delta-controls.webp"
+import image1 from "../../assets/level.webp";
+import image2 from "../../assets/flow.webp";
+import image3 from "../../assets/temperature.webp";
+const products = [
+  {
+    title: 'Level',
+    backgroundImage: image1,
+  },
+  {
+    title: 'Flow',
+    backgroundImage: image2,
+  },
+  {
+    title: 'Temperature',
+    backgroundImage: image3,
+  },
+];
 
 const schema = {
   "@context": "https://schema.org",
@@ -17,9 +34,9 @@ const schema = {
   ]
 };
 ---
-<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/belgas">
+<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/delta-controls">
   <div class="container w-11/12 max-w-6xl mx-auto pt-40">
-    <CardAbout title='About' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: belgas.src, alt: 'image'}}imagePosition='top'/>
+    <CardAbout title='Electric Actuators and Controls' subtitle='AMERICAN MANUFACTURER OF' description='Indelac Controls, Inc. manufactures a broad range of products for the valve and damper automation industry.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top' button={{href: '', label:"See catalog"}}/>
   </div>
-  <Products />
+  <Products products={products} />
 </Layout>

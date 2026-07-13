@@ -3,7 +3,46 @@ import "../../styles/global.css";
 import Layout from "../../layouts/Layout.astro";
 import CardAbout from "../../components/CardAbout.astro"
 import Products from "../../layouts/Products.astro";
-import belgas from "../../assets/indelac.png"
+import belgas from "../../assets/indelac.webp"
+import image1 from "../../assets/electric-actuators.webp";
+import image2 from "../../assets/spring-return-actuators.webp";
+import image3 from "../../assets/internal-battery-back-up.webp";
+import image4 from "../../assets/external-battery-back-up.webp";
+import image5 from "../../assets/control-panels.webp";
+import image6 from "../../assets/mounting-kits.webp";
+
+const products = [
+  {
+    title: 'Electric Actuators',
+    description: 'High-performance electric actuators designed for precise and reliable valve control.',
+    backgroundImage: image1,
+  },
+  {
+    title: 'Spring Return Electric Actuators',
+    description: 'Spring return actuators that provide safe fail-safe positioning during power loss.',
+    backgroundImage: image2,
+  },
+  {
+    title: 'Internal Battery Back-Up',
+    description: 'Internal backup battery systems that keep equipment running during power interruptions.',
+    backgroundImage: image3,
+  },
+  {
+    title: 'External Battery Back-Up',
+    description: 'External backup battery solutions for extended operation and dependable field performance.',
+    backgroundImage: image4,
+  },
+  {
+    title: 'Control Panels',
+    description: 'Control panels engineered to simplify monitoring and management of automation systems.',
+    backgroundImage: image5,
+  },
+  {
+    title: 'Mounting Kits',
+    description: 'Complete mounting kits for fast, secure installation of actuators and related accessories.',
+    backgroundImage: image6,
+  },
+];
 
 const schema = {
   "@context": "https://schema.org",
@@ -17,9 +56,9 @@ const schema = {
   ]
 };
 ---
-<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/belgas">
+<Layout title="H&C Products" description="H&C Products, California 5650 District Blvd Suite 101 Bakersfield, Ca. 93313; Phone Office: (661) 397-0290;" canonical="/manufacturers/indelac">
   <div class="container w-11/12 max-w-6xl mx-auto pt-40">
-    <CardAbout title='About' subtitle='OUR GOALS & HISTORY' description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labo et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top'/>
+    <CardAbout title='Electric Actuators and Controls' subtitle='AMERICAN MANUFACTURER OF' description='Indelac Controls, Inc. manufactures a broad range of products for the valve and damper automation industry.' image={{ src: belgas.src, alt: 'image'}} imagePosition='top' button={{href: '', label:"See catalog"}}/>
   </div>
-  <Products />
+  <Products products={products} />
 </Layout>

@@ -1,84 +1,99 @@
 ---
 import Card from '../components/Card.astro';
-import backgroundImage from '../assets/pdfImage.webp';
-import image1 from '../assets/image1.jpg';
-import image2 from '../assets/image2.jpg';
-import image3 from '../assets/image3.png';
-import image4 from '../assets/image4.jpg';
+import image1 from '../assets/ball-valves.webp';
+import image2 from '../assets/pressure-transmitters.webp';
+import image3 from '../assets/electric-actuators.webp';
+import image4 from '../assets/temperature-transmitters.webp';
+import image5 from '../assets/superlok-check-valves.webp';
+import image6 from '../assets/thermowells.webp';
+const { products = null } = Astro.props;
+
+const defaultProducts = [
+    {
+        title: 'Ball Valves',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image1,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+    {
+        title: 'Pressure Transmitters',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image2,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+    {
+        title: 'Electric Actuators',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image3,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+    {
+        title: 'Temperature Transmitters',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image4,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+    {
+        title: 'Superlok Check Valves',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image5,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+    {
+        title: 'Thermowells',
+        description: 'Proudly Family Owned Since 2015 - ANSI 600',
+        backgroundImage: image6,
+        options: [
+            'Caudal Control Valves 12m/min',
+            'Powered Actuators 75 HP',
+            'Noise 68 dB(A)',
+        ],
+    },
+];
+
+const list = products || defaultProducts;
+
 ---
+
 <section class="bg-zinc-100">
-    <div class="container, py-16 mx-auto flex flex-col gap-8 w-11/12 max-w-6xl justify-between items-center">
-        <div class="flex flex-col gap-4 items-center">
-            <h2 class="font-semibold text-4xl italic text-blue-900">Our Products</h2>
-            <p class="text-zinc-500">Discover our range of high-quality products designed to meet your needs.</p>
+        <div class="container, py-16 mx-auto flex flex-col gap-8 w-11/12 max-w-6xl justify-between items-center">
+                <div class="flex flex-col gap-4 items-center">
+                        <h2 class="font-semibold text-4xl italic text-blue-900">Our Products</h2>
+                        <p class="text-zinc-500">Discover our range of high-quality products designed to meet your needs.</p>
+                </div>
+                <div class="flex flex-col gap-4 w-full sm:grid sm:grid-cols-2 md:grid-cols-3">
+                        {list.map((p) => (
+                                <Card
+                                        title={p.title}
+                                        description={p.description}
+                                        backgroundImage={p.backgroundImage}
+                                        backgroundAlt={p.backgroundAlt}
+                                        options={p.options}
+                                        icon={p.icon}
+                                        variant={p.variant}
+                                        button={p.button}
+                                />
+                        ))}
+                </div>
         </div>
-        <div class="flex flex-col gap-4 w-full sm:grid sm:grid-cols-2 md:grid-cols-3">
-            <Card
-            title="Family Owned"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image1}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-            <Card
-            title="Service"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image2}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-            <Card
-            title="Delivery"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image3}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-            <Card
-            title="Delivery"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image2}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-            <Card
-            title="Delivery"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image4}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-            <Card
-            title="Delivery"
-            description="Proudly Family Owned Since 2015 - ANSI 600"
-            backgroundImage={image1}
-            options={[
-                "Caudal Control Valves 12m/min",
-                "Powered Actuators 75 HP",
-                "Noise 68 dB(A)",
-            ]}
-            
-            />
-        </div>
-    </div>
 </section>
