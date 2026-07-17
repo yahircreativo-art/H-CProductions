@@ -1,6 +1,7 @@
 ---
 import Button from '../components/Button.astro';
 import pdfImage from '../assets/pdfImage.webp';
+import catalog from "/catalog.pdf"
 ---
 <section class="relative bg-zinc-100">
     <div class="container py-16 mx-auto flex flex-col md:flex-row gap-8 w-11/12 max-w-6xl justify-between items-center">
@@ -9,8 +10,9 @@ import pdfImage from '../assets/pdfImage.webp';
             <h2 class="font-semibold text-4xl italic text-blue-900">Refining, Agriculture, Industrial, Oil & Gas</h2>
             <p class="text-zinc-800">With expertise across these diverse industries.</p>
             <div class="flex flex-col lg:flex-row gap-4">
+                
                 <Button label="Learn More" href="/contact" variant="primary" />
-                <Button label="Show catalog" href="/H-CProductions/manufacturers" variant="secondary" />
+                <Button label="Show catalog" href={catalog} variant="secondary" />
             </div>
         </div>
         <div>
